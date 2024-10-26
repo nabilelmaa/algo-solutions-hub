@@ -25,7 +25,8 @@ int hIndex(vector<int> &citations)
 
     for (int i = 0; i < citations.size(); ++i)
     {
-        if (citations[i] < i + 1)
+        int paper = i + 1;
+        if (citations[i] < paper)
         {
             return i;
         }
