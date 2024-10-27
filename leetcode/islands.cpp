@@ -1,12 +1,13 @@
 #include <iostream>
-#include <string>
 #include <vector>
+#include <string>
 
 using namespace std;
 
 void dfs(vector<vector<char>> &grid, int row, int col)
 {
-    if (row < 0 || col < 0 ||
+    if (row < 0 ||
+        col < 0 ||
         row >= grid.size() ||
         col >= grid[0].size() ||
         grid[row][col] == '0')
@@ -16,12 +17,12 @@ void dfs(vector<vector<char>> &grid, int row, int col)
 
     grid[row][col] = '0';
 
-    dfs(grid, row + 1, col);
-    dfs(grid, row - 1, col);
-    dfs(grid, row, col + 1);
-    dfs(grid, row, col - 1);
+    dfs(grid, row + 1, col); // down
+    dfs(grid, row - 1, col); // up
+    dfs(grid, row, col + 1); // right
+    dfs(grid, row, col - 1); // left
 }
-int numIsIlands(vector<vector<char>> &grid)
+int numIsIslands(vector<vector<char>> &grid)
 {
     if (grid.empty())
     {
@@ -45,6 +46,7 @@ int numIsIlands(vector<vector<char>> &grid)
     }
     return islands;
 }
+
 int main()
 {
     int rows, cols;
@@ -62,8 +64,7 @@ int main()
         }
     }
 
-    cout << numIsIlands(grid) << endl;
-
+    cout << numIsIslands(grid) << endl;
     return 0;
 }
 
