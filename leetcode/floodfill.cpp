@@ -33,40 +33,40 @@ vector<vector<char>> floodfill(vector<vector<char>> &grid, int sr, int sc, char 
     return grid;
 }
 
-// int main()
-// {
-//     int rows, cols;
-//     cin >> rows >> cols;
-//     vector<vector<char>> grid(rows, vector<char>(cols));
+int main()
+{
+    int rows, cols;
+    cin >> rows >> cols;
+    vector<vector<char>> grid(rows, vector<char>(cols));
 
-//     for (int i = 0; i < rows; ++i)
-//     {
-//         string line;
-//         cin >> line;
-//         for (int j = 0; j < cols; ++j)
-//         {
-//             grid[i][j] = line[j];
-//         }
-//     }
+    for (int i = 0; i < rows; ++i)
+    {
+        string line;
+        cin >> line;
+        for (int j = 0; j < cols; ++j)
+        {
+            grid[i][j] = line[j];
+        }
+    }
 
-//     int sr, sc;
-//     cin >> sr >> sc;
-//     char newColor;
-//     cin >> newColor;
+    int sr, sc;
+    cin >> sr >> sc;
+    char newColor;
+    cin >> newColor;
 
-//     grid = floodfill(grid, sr, sc, newColor);
+    grid = floodfill(grid, sr, sc, newColor);
 
-//     for (int i = 0; i < rows; ++i)
-//     {
-//         for (int j = 0; j < cols; ++j)
-//         {
-//             cout << grid[i][j];
-//         }
-//         cout << "\n";
-//     }
+    for (int i = 0; i < rows; ++i)
+    {
+        for (int j = 0; j < cols; ++j)
+        {
+            cout << grid[i][j];
+        }
+        cout << "\n";
+    }
 
-//     return 0;
-// }
+    return 0;
+}
 /*
 Sample input:
 3 3

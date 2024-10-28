@@ -68,5 +68,4 @@ Sample input:
 10
 Sample Output:
 0
-
 */
