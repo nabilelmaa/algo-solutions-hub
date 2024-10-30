@@ -3,6 +3,8 @@
 
 using namespace std;
 
+int students[25];
+
 int canCompleteCircuit(vector<int> &gas, vector<int> &cost)
 {
 
@@ -70,5 +72,8 @@ Sample input
 
 Sample output:
 -1
-
 */
+
+
+
+
