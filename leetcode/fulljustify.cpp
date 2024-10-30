@@ -107,9 +107,11 @@ Sample output:
 ]
 
 ---------------------------------------------------------
+Sample input:
 18
 Science is what we understand well enough to explain to a computer. Art is everything else we do
 20
+Sample output:
 [
   "Science  is  what we",
   "understand      well",
